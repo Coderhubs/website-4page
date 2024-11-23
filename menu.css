@@ -1,0 +1,157 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    height: 100%; /* Ensure body height is 100% */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Section */
+.menu-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0;
+    color: #2c3e50;
+}
+
+/* Menu Section Styling */
+.menu-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: 80vh; /* Limit max height to make scrolling possible */
+    flex: 1 1 auto; /* Allow this section to grow and take up available space */
+}
+
+/* Menu Item Styling */
+.menu-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.menu-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-item li {
+    background-color: #ecf0f1;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #2c3e50;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item li:hover {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* Hover Effect */
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-item {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .menu-title {
+        font-size: 28px;
+        margin: 15px 0;
+    }
+
+    .menu-section {
+        gap: 15px;
+    }
+
+    .menu-item h3 {
+        font-size: 20px;
+    }
+
+    .menu-item li {
+        font-size: 14px;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-links {
+        margin-top: 10px;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .menu-item {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .menu-title {
+        font-size: 24px;
+    }
+
+    .menu-section {
+        gap: 10px;
+        overflow-y: auto; /* Allow scrolling */
+        max-height: 60vh; /* Limit height for better scrolling */
+    }
+
+    .menu-item h3 {
+        font-size: 18px;
+    }
+
+    .menu-item li {
+        font-size: 12px;
+    }
+
+    .navbar-container {
+        padding: 0 10px;
+    }
+}

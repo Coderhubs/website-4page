@@ -1,0 +1,93 @@
+/* Global Styles */
+body {
+    display: flex;
+    flex-direction: column; /* Adjusted to stack content vertically */
+    justify-content: flex-start; /* Align at the top */
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 94%);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 120px; /* Added more space for the fixed navbar */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+/* Container Flexbox Setup */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;  /* Smaller gap between elements */
+    width: 90%;
+    max-width: 900px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-top: 80px; /* Added more space between navbar and content */
+}
+
+/* About Section */
+.about {
+    background-color: #282828;
+    color: #fff;
+    padding: 1rem; /* Changed padding to 1rem for scalability */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    min-height: 180px;
+}
+
+/* About Section Heading */
+.about h1 {
+    font-size: 1.25rem; /* Font size changed to rem for scalability */
+    margin-bottom: 1rem;
+}
+
+/* Food Image Section */
+.food {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 250px;
+    max-width: 100%;
+}
+
+.food img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    z-index: 1000; /* Keep navbar above content */
+    margin-bottom: 30px; /* Added bottom margin to give space below navbar */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+.navbar a:hover {
+    background-color: #444;
+}
